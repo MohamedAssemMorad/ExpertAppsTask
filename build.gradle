@@ -1,0 +1,40 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        kotlin_version = "1.7.0"
+        kotlin_std_version = "1.6.20"
+        koin_architecture_version = "0.8.2"
+//        koin_version = "3.0.1"
+        koin_version = "3.1.5"
+        camerax_version = "1.1.0-beta01"
+        room_version = "2.4.2"
+        mockk = "1.12.3"
+        koin_test = "3.1.5"
+        mockwebserver = "5.0.0-alpha.6"
+        runner_ver = "1.2.0"
+        junit_x_ext = "1.1.3"
+        nav_version = "2.4.2"
+        testx_rules = "1.3.0"
+        android_arch_core_testing = "1.1.1"
+        espresso_contrib = "3.3.0"
+    }
+    repositories {
+        google()
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_std_version"
+        dependencies {
+            classpath 'com.android.tools.build:gradle:7.1.3'
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_std_version"
+            classpath 'com.google.gms:google-services:4.3.10'
+            classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
+            // NOTE: Do not place your application dependencies here; they belong
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
